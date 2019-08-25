@@ -1,21 +1,42 @@
-<div class="navbar">
-  <div class="logo">
-    <p>My Cart</p>
-  </div>
-  <div class="navbar-contenr">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </div>
-  <div class="user-detail">
-         <span class="user-image">&amp;</span>
 
-         <span class="user-name">Hi {{userName}}</span>
-         <span class="user-cart">cart</span>
+  <div class="navbar">
+    <div class="logo">
+      <a routerLink=""><p>myCart</p></a>
+    </div>
+    <div class="search-products">
+      <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Button</button>
+     
+             </div>
+      </div>
+    </div>
+
+    <div class="navbar-content">
+      <ul>
+        <a routerLink="/home"><li>Home</li></a>
+        <a routerLink="/about"><li>About Us</li></a>
+         <a routerLink="/contact"><li>Contact Us</li></a>
+         <a routerLink="/login"><li>Login</li></a>
+         <a routerLink="/signup"><li>SignUP</li></a>
+      </ul>
+    </div>
+    <div class="user-info">
+      <span><div class="user-image">
+        <img src="#" alt="">
+        </div>
+      </span>
+      <span> <div class="user-name">
+        Hi  {{  userName}}
+        </div>
+      </span>
+    </div>
+    <div class="shopping-cart">
+      <ul>
+        <li><span>{{cartItemsNumber}}</span></li>
+        <li><a routerLink="/cart"> <fa-icon [icon]="faCartPlus"></fa-icon></a></li>
+      </ul>
+    </div>
   </div>
-   
-  
-</div>
+      
